@@ -5,13 +5,11 @@ from numpy import linalg as LA
 
 TOL = 10 ** -2
 
-print("Erro setado para:" + str(TOL) + "\n")
-
 #Calculates error as norm of xk-xi to infinity divided by norm of xk to infinity
 def relative_error(xk, xi):
     return (LA.norm(xk - xi, np.inf) / LA.norm(xk, np.inf))
 
-# Does gauss seidel algorithm in matricial form
+# Does Gauss-Seidel algorithm in matricial form
 # It is x^k+1 = (L+D)^-1 x (b - U*x^k)
 # Where D is diagonal matrix
 # L is the lower triangle matrix
@@ -36,12 +34,10 @@ def gauss_seidel_matricial(A, xi, b, epsilon):
         xk = np.dot(LA.inv(L + D), (b - np.dot(U, xi)))
 
         if i == 1000:
-            print("Convergencia nao alcancada")
             break
         i = i + 1
         Er = relative_error(xk, xi)
         xi = xk
-    print("Numero de iteracoes Gauss-Seidel:" + str(i))
     return xk
 
 # Does Jacobi with the matricial form
@@ -63,13 +59,11 @@ def jacobi_matricial(A, xi, b, epsilon):
     while Er > epsilon:
         xk = np.dot(LA.inv(D), (b - np.dot(M, xi)))
         if i == 1000:
-            print("Convergencia nao alcancada")
             break
         Er = relative_error(xk, xi)
         xi = xk
         i = i+1
 
-    print("Numero de iteracoes em Jacobi:" + str(i))
     return xk    
 
 A = np.array([[3, 1], [2, 2]])
