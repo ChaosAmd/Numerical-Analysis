@@ -70,12 +70,10 @@ A = np.array([[3, 1], [2, 2]])
 xi = np.array([0, 0])
 b = np.array([4, 2])
 
-print("~Gauss-Seidel~") 
 xgs = gauss_seidel_matricial(A, xi, b, TOL)
 print(xgs)
 
 print("\n")
 
-print("~Jacobi~")
 xj = jacobi_matricial(A, xi, b, TOL)
 print(xj)
