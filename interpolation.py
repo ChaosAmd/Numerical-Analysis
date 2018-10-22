@@ -45,7 +45,7 @@ def newton_interpolation(m, x, y, z):
     for i in range(m):
         dely[i] = y[i]
 
-    # Constructions of the divided difference
+    # Constructions of the divided differences
     k = 1
     while k < m-1:
         j = m
@@ -75,7 +75,7 @@ def gregory_newton_interpolation(m, x, y, z):
     for i in range(m):
         dely[i] = y[i]
 
-    # Constructions of the finite difference
+    # Constructions of the finite differences
     k = 1
     while k < m-1:
         j = m
