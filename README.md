@@ -13,3 +13,7 @@ A linear, lagrange, newton and gregory interpolation implementations
 
 ### integration.py
 Numeric integration by trapezoidal, 1/3 and 3/8 Simpson's rules. Example done in the integral: ![img](http://latex.codecogs.com/svg.latex?%5Cint_0%5E2%28x%5E3%2Bx%2B1%29%5Cmathrm%7Bd%7Dx)
+
+### curve_fit.py
+Curve fitting by the minimum square method. Example set to linear curve fitting and on
+3d polynomial equation z = ax^2+by^2 
