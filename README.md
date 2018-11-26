@@ -16,4 +16,4 @@ Numeric integration by trapezoidal, 1/3 and 3/8 Simpson's rules. Example done in
 
 ### curve_fit.py
 Curve fitting by the minimum square method. Example set to linear curve fitting and on
-3d polynomial equation z = ax^2+by^2 
+3d polynomial equation ![img](https://latex.codecogs.com/svg.latex?z&space;=&space;ax^2&space;&plus;&space;by^2)
